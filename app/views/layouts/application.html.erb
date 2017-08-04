@@ -6,6 +6,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo"><%= Id.first.other_name %></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to 'Projects', projects_path %></li>
+        <li><%= link_to 'CV'  %></li>
+        <li><%= link_to 'Reach me' %></li>
+
+      </ul>
+    </div>
+  </nav>
   </head>
 
   <body>
