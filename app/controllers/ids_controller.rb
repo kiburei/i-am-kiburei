@@ -4,7 +4,7 @@ class IdsController < ApplicationController
   # GET /ids
   # GET /ids.json
   def index
-    @ids = Id.all
+    @id = Id.first
   end
 
   # GET /ids/1
