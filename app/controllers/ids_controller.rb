@@ -5,6 +5,7 @@ class IdsController < ApplicationController
   # GET /ids.json
   def index
     @id = Id.first
+    @skills = Skill.all
   end
 
   # GET /ids/1

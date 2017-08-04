@@ -7,7 +7,11 @@
       I am here to affirm I am the above. Aside from names, my true identity is what I do on a daily basis. Guess we'd say Engineer. Oh! thats what I go
       by around my place work. If you happen to drop by.
     </p>
-
+    <p>My skills.</p>
+    <% @skills.each do |skill| %>
+      <p><%= skill.skill %></p>
+    <% end%>
+    <%= link_to 'Add skill', new_skill_path %>
   </div>
   <div class="col s6">
     <%= image_tag('bear') %>
