@@ -26,6 +26,13 @@
     <%= f.text_field :description %>
   </div>
 
+  <div class="field">
+    <% @skills.each do |skill| %>
+      <%= f.radio_button :skills_id, skill.skill %>
+      <%= f.label  :skills_id, value: skill.skill %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -10,5 +10,9 @@
   <%= @skill.rating %>
 </p>
 
+<% @projects.each do |project| %>
+  <li><%= project.name %></li>
+<% end %>
+
 <%= link_to 'Edit', edit_skill_path(@skill) %> |
 <%= link_to 'Back', skills_path %>

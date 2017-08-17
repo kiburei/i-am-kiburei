@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+  before_action :get_skill_id, only: [:create]
   # GET /projects
   # GET /projects.json
   def index
@@ -10,11 +10,13 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @skills = Skill.where(project_id: params[:id])
   end
 
   # GET /projects/new
   def new
     @project = Project.new
+    @skills = Skill.all
   end
 
   # GET /projects/1/edit
@@ -25,6 +27,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.skills_id = @skill.id
 
     respond_to do |format|
       if @project.save
@@ -67,8 +70,12 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
     end
 
+    def get_skill_id
+      @skill = Skill.find_by_skill(params[:project][:skills_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :url, :description)
+      params.require(:project).permit(:name, :url, :description, :skills_id)
     end
 end

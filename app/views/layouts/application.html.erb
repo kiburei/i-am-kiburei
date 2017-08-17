@@ -11,6 +11,7 @@
       <a href="/" class="brand-logo"><%= Id.first.other_name %></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to 'Projects', projects_path %></li>
+        <li><%= link_to 'Blog', blogs_path %></li>
         <li><%= link_to 'CV'  %></li>
         <li><%= link_to 'Reach me' %></li>
 
@@ -20,7 +21,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
   <footer class="page-footer">
       <div class="container">

@@ -10,6 +10,7 @@ class SkillsController < ApplicationController
   # GET /skills/1
   # GET /skills/1.json
   def show
+    @projects = Project.where(skills_id: params[:id])
   end
 
   # GET /skills/new
@@ -69,6 +70,6 @@ class SkillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def skill_params
-      params.require(:skill).permit(:skill, :rating)
+      params.require(:skill).permit(:skill, :rating, :project_id)
     end
 end

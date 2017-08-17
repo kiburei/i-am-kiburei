@@ -9,7 +9,7 @@
     </p>
     <p>My skills.</p>
     <% @skills.each do |skill| %>
-      <p><%= skill.skill %></p>
+      <p><%= link_to skill.skill, skill_path(skill) %></p>
     <% end%>
     <%= link_to 'Add skill', new_skill_path %>
   </div>
