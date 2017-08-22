@@ -10,5 +10,13 @@
   <%= @blog.body %>
 </p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+
+
+<h4>comments</h4>
+<%= link_to 'Add Comment', new_comment_path(:blog_id => @blog) %>
+<% @comments.each do |comment| %>
+  <ul>
+    <li><%= comment.body %></li>
+  </ul>
+<% end %>
