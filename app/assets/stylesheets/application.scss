@@ -18,12 +18,15 @@
  $secondary-color: color("yellow", "base") !default;
  @import "materialize";
 
+// *****************************************
+nav {
+  background-image: url('bear.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// *************************************
  body {
-   display: flex;
-   min-height: 100vh;
-   flex-direction: column;
+   background-image: url('bg.png');
  }
 
- main {
-   flex: 1 0 auto;
- }
+// **************************************
