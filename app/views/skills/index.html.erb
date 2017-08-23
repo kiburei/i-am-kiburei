@@ -23,9 +23,9 @@
            <%= link_to 'Add Reference', new_reference_path, class: 'btn', id: 'new_ref', remote: true  %>
            <div id="user_refs">
              <% if @references.any? %>
-             <%= render 'references/reference' %>
+              <%= render 'references/reference' %>
              <% else %>
-             <p>People dont like you</p>
+              <p>People dont like you</p>
              <% end %>
            </div>
         </div>
