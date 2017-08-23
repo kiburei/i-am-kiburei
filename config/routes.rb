@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :comments
   devise_for :users
-  resources :blogs
+  resources :blogs do    
+    resources :comments
+  end
   resources :skills
   resources :projects
 
