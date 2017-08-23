@@ -24,7 +24,6 @@ class ReferencesController < ApplicationController
   # POST /references
   # POST /references.json
   def create
-    @references = Reference.all
     @reference = Reference.new(reference_params)
 
     respond_to do |format|

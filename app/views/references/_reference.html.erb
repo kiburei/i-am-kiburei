@@ -1,1 +1,3 @@
-i  <li><%= reference.name %> -- <%= reference.message %></li>
+<% @references.each do |reference|%>
+  <p><%= reference.name %> -- <%= reference.message %></p>
+<% end %>
