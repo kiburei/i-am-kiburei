@@ -20,5 +20,16 @@
        <div class="col s12 m6">
          <h1>Bio</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         <div class="references">
+           <h2>References</h2>
+           <%= link_to 'Add Reference', new_reference_path, class: 'btn', id: 'new_ref', remote: true  %>
+           <div id="user_refs">
+             <% if @references.any? %>
+             <%= render 'references/reference' %>
+             <% else %>
+             <p>People dont like you</p>
+             <% end %>
+           </div>
+        </div>
        </div>
     </div>
