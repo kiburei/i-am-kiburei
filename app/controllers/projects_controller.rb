@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @github_repos = Github.repos.list user: 'kiburei'
   end
 
   # GET /projects/1

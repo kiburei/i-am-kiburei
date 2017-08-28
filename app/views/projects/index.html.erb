@@ -2,9 +2,22 @@
 
 <h1>Projects</h1>
 
-<% @projects.each do |project| %>
-  <div class="card">
-    <h3><%= link_to project.name, project.url, target: '_blank' %></h3>
-    <p><%= project.description %></p>
+<div class="row">
+  <div class="col s6">
+    <% @projects.each do |project| %>
+      <div class="card">
+        <h3><%= link_to project.name, project.url, target: '_blank' %></h3>
+        <p><%= project.description %></p>
+      </div>
+    <% end %>
+
   </div>
-<% end %>
+  <div class="col s6">
+    <h3>All Github Repos</h3>
+    <% @github_repos.each do |repo| %>
+      <li><%= link_to repo.name, repo.clone_url, target: '_blank' %>: <%= repo.language %></li>
+    <% end %>
+
+  </div>
+
+</div>
