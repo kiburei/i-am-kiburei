@@ -10,14 +10,16 @@
            </div>
            <div class="card-action">
              <a href="#">Rating: <%= skill.rating %></a>
-             <a href="#"><%= link_to 'Projects', skill %></a>
+             <%= link_to 'Projects', skill %>
            </div>
          </div>
          <% end %>
        </div>
        <div class="col s12 m6">
-         <h4>I am Kiburei</h4>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         <h4>About Kiburei,</h4>
+         <p>I am lucky to be fullstack software engineer and bachelors degree holder in Computer Technology. I like to think that computers hold the power to
+         make the world a better place. I am actively particapting towards this by putting in work and this is why you are probably here. So we can change things together \o/.
+         Do have a look at some of my past, current and ongoing projects. Other than computers I love the outdoors</p>
          <div class="references">
            <h5>References</h5>
            <%= link_to 'Add Reference', new_reference_path, class: 'btn', id: 'new_ref', remote: true  %>
